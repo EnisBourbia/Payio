@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+    <link rel="stylesheet" href="./invoice.css">
+    <style>
+.email-container {
+    width: 90%;
+    margin: auto;
+    border-top: 3px solid rgb(0, 212, 166);
+    padding: 10px;
+    border-right: 1px solid rgb(187, 187, 187);
+    border-left: 1px solid rgb(187, 187, 187);
+    border-bottom: 1px solid rgb(187, 187, 187);
+
+}
+
+.email-header h2, .invoice-amount h2, .invoice-amount h1 {
+    color: rgb(0, 212, 166);
+}
+
+.invoice-amount {
+    width: 60%;
+    display: inline-block;
+}
+
+.invoice-amount span {
+    font-size: 24px;
+    color: rgb(0, 212, 166);;
+}
+
+#total-amount {
+    font-size: 28px;
+    color: rgb(0, 212, 166);;
+}
+
+.invoice-info {
+    width: 40%;
+    display: inline-block;
+}
+
+.invoice-link {
+    padding: 30px;
+}
+
+.invoice-link a {
+    padding: 8px 20px 8px 20px;
+    color: #FFF;
+    background-color: rgb(0, 212, 166);
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+
+.email-footer {
+    border-top: 1px solid rgb(187, 187, 187);
+    background-color: #EEE;
+    text-align: center;
+    padding: 20px 20px 20px 0px;
+}
+
+.email-footer p {
+    padding: 10px;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="email-container">
+<div class="email-header">
+<h2>{{ company.name }}</h2>
+<p>har skickat en faktura till <b>{{ customer.name }}</b> via Fakturio</p>
+</div>
+
+<div class="invoice-amount">
+<span>Belopp:</span><br>
+<span id="total-amount">{{ invoice.total }} SEK</span>
+</div>
+
+<div class="invoice-info">
+    <p>FAKTURANR:<br><b>{{ invoice.invoice_number }}</b><br>
+    Förfallodag:<br>
+    <b>{{ invoice.expiry_date }}</b>
+</p>
+</div>
+
+<div class="">
+    <p><b>Kontaktuppgifter till {{ company.name }}</b><br>
+    {{ company.name }}<br>
+    {{ company.adress }}<br>
+    {{ company.zip_code }} {{ city }}<br>
+    Telefon: {{ company.phone_number }}<br>
+    E-post: {{ company.email }}<br>
+</p>
+</div>
+
+<div class="invoice-link">
+    <a href="http://google.com">Öppna fakturan</a>
+</div>
+
+<div class="email-footer">
+    <p>Automatiserad fakturering med bibehållen kontroll.<br>
+    Gör som många andra, fakturera via faktureringstjänsten <a>Fakturio</a></p>
+</div>
+
+</div>
+</body>
+</html>

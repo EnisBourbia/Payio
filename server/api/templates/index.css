@@ -1,0 +1,184 @@
+.header {
+    width: 100%;
+    font-family: sans-serif;
+    margin-bottom: 30px;
+}
+
+.company {
+    display: inline-block;
+    width: 45%;
+    position: relative;
+}
+
+.company img {
+    max-width: 200px;
+    max-height: 200px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transform: translate(-50%, -50%);
+}
+
+.invoice-info {
+    text-align: left;
+    background-color: rgb(221, 221, 221);
+    min-width: 320px;
+    float: right;
+    padding: 5px;
+}
+
+.invoice-info-data {
+    width: 160px;
+    float: right;
+}
+
+.sender-row {
+    margin: 30px 0px 30px 0px!important;
+}
+
+.block-info {
+    display: inline-block;
+    width: 49%;
+}
+
+
+.invoice-info-container {
+    min-width: 100%;
+}
+
+.invoice-info-2 {
+    width: 220px;
+}
+
+.invoice-info-header {
+    font-weight: 600;
+}
+
+.invoice-info-text {
+    display: inline-block;
+    max-width: 150px;  
+    float: right;  
+}
+
+.invoice-info-header-ref {
+    float: right;
+}
+
+.article-table {
+    margin-top: 10px;
+    min-height: 200px;
+}
+
+.article-table table {
+    font-size: 11px;
+    width:100%;
+}
+
+.article-table table tr th {
+    font-weight: 800;
+    background-color: #f1f1f1;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.sum-table {
+    width: 100%;
+    padding: 8px;
+    margin: auto;
+    border-radius: 3px;
+    background-color: rgba(173, 173, 173, 0.349);
+}
+
+.sum-table .sum {
+    display: inline-block;
+}
+
+.sum-table .sum-total-float {
+    float: right;
+}
+
+.sum-table .amount-header {
+    display: inline-block;
+    width: 120px;
+    float: left;
+    text-align: left;
+}
+
+.policy-text {
+    font-size: 11px;
+    padding-top: 5px;
+}
+
+
+.sum-table .amount-header-netto {
+    width: 100px;
+    display: inline-block;
+    float: left;
+    text-align: left;
+}
+.sum-table .amount-netto {
+    width: 100px;
+    display: inline-block;
+    float: left;
+    text-align: left;
+    font-weight: 900;
+}
+
+.sum-table .amount-header-moms {
+    width: 100px;
+    display: inline-block;
+    float: left;
+    text-align: left;
+}
+.sum-table .amount-moms {
+    width: 100px;
+    display: inline-block;
+    float: left;
+    text-align: left;
+    font-weight: 900;
+}
+
+.sum-table .amount-header-total {
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+    float: right;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.sum-table .amount-number-total {
+    display: inline-block;
+    float: right;
+    clear: right;
+    width: 120px;
+    text-align: right;
+    font-size: 15px;
+    font-weight: 900;
+
+}
+
+.payment-info {
+    display: inline-block;
+    font-size: 13px;
+    width: 48%;
+}
+
+.info-company {
+}
+
+.payment-info-header {
+    width: 85px;
+    display: inline-block;
+}
+
+.payment-info-text {
+    display: inline-block;
+    width: calc(100%-85px);
+    float: right;
+}
+
+.float-right {
+    float: right;
+}
+

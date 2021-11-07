@@ -1,0 +1,113 @@
+{% load l10n %}
+
+
+<html>
+<head>
+  <title>Faktura - {{ company.name | safe }}</title>
+</head>
+<body>
+
+<div class="header row justify-content-center">
+  <div class="company">
+    <img src="http://localhost:8000{{ company.logo | safe }}" />
+  </div>
+  <div class="invoice-info">
+    <span id="invoice-info-header">FAKTURA</span><br/>
+    <span>Att betala: </span> <span class="invoice-info-data">{{ total | safe }} {{ currency | safe }}</span><br/>
+    <span>OCR-nr/meddelande: </span> <span class="invoice-info-data">{{ ocr_number | safe }}</span><br/>
+    <span>Bankgiro: </span> <span class="invoice-info-data">{{ company.bankgiro | safe }}</span><br/>
+    <span>Förfallodatum: </span> <span class="invoice-info-data">{{ expiry_date | safe }}</span>
+  </div>
+</div>
+  
+
+<div class="sender-row">
+    <div class="block-info"> 
+      <br/>
+    <span>Avsändare:</span><br/>
+    <span><b>{{ company.name | safe }}</b></span><br>
+    <span>{{ company.adress | safe }}</span><br>
+    <span>{{ company.city | safe }}</span>
+    <span>{{ company.zip_code | safe }}</span><br>
+    <span>{{ company.email | safe }}</span>
+  </div>
+
+    <div class="block-info"> 
+      <br/>
+    <span>Mottagare:</span><br/>
+    <span><b>{{ customer.name | safe }}</b></span><br>
+    <span>{{ customer.adress | safe }}</span><br>
+    <span>{{ customer.city | safe }}</span>
+    <span>{{ customer.zip_code | safe }}</span><br>
+    <span>{{ customer.email | safe }}</span>
+    </div>
+</div>
+
+<div class="invoice-info-container">
+<div class="invoice-info-2">
+  <span class="invoice-info-header">Fakturanummer: </span><span class="invoice-info-text"> {{ invoice_number | safe }}</span><br/>
+  <span class="invoice-info-header">Fakturadatum: </span><span class="invoice-info-text"> {{ date | safe }}</span><br/>
+  <span class="invoice-info-header">Vårt org.nr:  </span><span class="invoice-info-text"> {{ company.org_number | safe }}</span><br/>
+  <span class="invoice-info-header">Er referens:  </span><span class="invoice-info-text"> {{ company.reference | safe }}</span><br/>
+</div>
+</div>
+
+<div class="article-table">
+  <table>
+    <tr>
+      <th>ART.NR</th>
+      <th>BESKRIVNING</th>
+      <th>KVANTITET</th>
+      <th>ENHET</th>
+      <th>Á-PRIS</th>
+      <th>MOMS</th>
+      <th>TOTALT</th>
+    </tr>
+    {% for articles in rows %}
+    <tr>
+      <!-- {{ articles.article_number }}
+      {{ articles.unit }} -->
+      <td>{{ articles.product.product_number | safe }}</td>
+      <td>{{ articles.description | safe }}</td>
+      <td>{{ articles.amount | safe }}</td>
+      <td>{{ articles.unit | safe }}</td>
+      <td>{{ articles.price | safe }} {{ currency | safe }}</td>
+      <td>{{ articles.moms | safe }} %</td>
+      <td>{{ articles.total | safe }} {{ currency | safe }}</td>
+    {% endfor %}
+
+    </tr>
+  </table>
+</div>
+
+<div class="sum-table">
+  <div class="sum"><span class="amount-header-netto">Netto: </span><br/><span class="amount-netto"> {{ netto | safe }}</span></div>
+  <div class="sum"><span class="amount-header-moms">Moms:</span><br/><span class="amount-moms"> {{ moms | safe }}</span></div>
+  <div class="sum sum-total-float"><span class="amount-header-total">ATT BETALA:</span><br/><span class="amount-number-total">{{ currency | safe }} {{ total | safe }}</span></div><br/>
+</div>
+
+<div class="policy-text">
+  <p>Denna faktura har skickats med faktureringstjänsten Fakturio. Betalningsvillkor: 30 förfallodagar, dröjsmålsränta {{ interest | safe }}%. Invändningar mot denna faktura ska göras senast {{ expiry_date | safe }} till {{ company.name | safe }} (Bolaget). Frågor ska
+    ställas till Bolaget ({{ company.email_contact | safe }}).<br>{% if company.f_skatt %} {{ "Godkänd för F-skatt." | safe }} {% endif %} {% if not company.f_skatt %} {{ "Inte godkänd för F-skatt." | safe }} {% endif %}</p>
+</div>
+
+<hr/>
+<div class="payment-info">
+  <span><b>Företagsinformation:</b></span><br/>
+  <span class="payment-info-header">Org.nr: </span><span class="payment-info-text"> <b>{{ company.org_number | safe }}</b></span><br>
+  <span class="payment-info-header">Moms.nr: </span><span class="payment-info-text"> <b>{{ company.moms_number | safe }}</b></span><br>
+  <span class="payment-info-header">IBAN: </span><span class="payment-info-text"> <b>{{ company.iban | safe }}</b></span><br>
+</div>
+
+<div class="payment-info float-right">
+  <span><b>Kundinformation:</b></span><br/>
+  <span class="payment-info-header">Org.nr: </span><span class="payment-info-text"> <b>{{ customer.org_number | safe }}</b></span><br>
+  <span class="payment-info-header">Moms.nr: </span><span class="payment-info-text"> <b>{{ customer.moms_number | safe }}</b></span><br>
+  <span class="payment-info-header">Kundnummer: </span><span class="payment-info-text"> <b>{{ customer.customer_number | safe }}</b></span><br>
+</div>
+
+<script>
+  
+</script>
+</body>
+</html>
