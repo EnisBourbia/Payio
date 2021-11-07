@@ -38,7 +38,10 @@ class CompanyView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def get(self, request, format=None):
-        company_data = Company.objects.get(user=request.user)        
+        try:
+            company_data = Company.objects.get(user=request.user)        
+        except:
+            return Response(status=status.HTTP_404_NOT_FOUND)
         serializer = CompanySerializer(company_data)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
