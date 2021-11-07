@@ -1,0 +1,58 @@
+.company-container {
+    background-color: #FFF;
+    margin-bottom: 30px;
+    padding: 20px 20px 0px 20px;
+    width: 90%;
+    margin: auto;
+}
+
+.price-list-container {
+    width: 100%;
+    background-color: blue;
+}
+
+.company-logo-settings {
+    min-width: 100px;
+    max-width: 250px;
+    max-height: 250px;
+    margin-top: 20px;
+}
+
+#logo-buttons {
+    margin: 5px;
+}
+
+.addon-box {
+    height: 350px;
+    padding: 10px;
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 5px;
+}
+
+.bookkeeping-chip {
+    background-color: rgb(223, 118, 19)!important;
+    color: #FFF!important;
+}
+
+.addon-button {
+    padding: 2px 5px 2px 5px!important;
+    font-size: 11px!important;
+    float: right;
+}
+
+.addon-text {
+    display: inline-block;
+    height: 150px;
+}
+
+.addon-modal-modal-input {
+    background-color: rgba(211, 211, 211, 0.322);
+    border-top: 1px solid rgba(201, 201, 201, 0.781);
+    border-bottom: 1px solid rgba(201, 201, 201, 0.781);
+    padding: 50px 20px 50px 20px;
+    margin-top: 30px;
+}
+
+.addon-modal-modal-input input {
+    width: 400px;
+}

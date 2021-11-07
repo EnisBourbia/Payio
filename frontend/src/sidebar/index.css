@@ -1,0 +1,63 @@
+.sidebar-container {
+    min-height: 100vh;
+    max-height: 100vh;
+    border-right: 1px solid rgb(197, 197, 197);
+    width: 250px;
+    background-color: rgb(25, 80, 62);
+}
+
+.menu-list {
+    min-width: 100%;
+}
+
+.sidebar-container ul {
+    list-style-type: none;
+    padding: 0px;
+    width: 100%;
+}
+
+.sidebar-container ul li {
+    width: 92%;
+    float: right;
+    margin: auto;
+    padding: 10px 4px 10px 2px;
+    font-size: 19px;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    color: #FFF;
+}
+
+.sidebar-container ul li:hover {
+    background-color: rgba(20, 90, 67, 0.589);
+    border-left: 2px solid rgb(0, 185, 56);
+    cursor: pointer;
+}
+
+.sidebar-container li i {
+    float: right;
+    padding: 10px;
+}
+
+.no-float {
+    float: none!important;
+}
+
+.create-invoice-button {
+    display: block;
+    margin: 10px 0px 10px 25px;
+    width: 200px;
+    background-color: rgb(24, 211, 24);
+    border: none;
+    color: #FFF;
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 5px 0px 5px 0px;
+}
+
+.display-none li {
+    width: 70%!important;
+    float: none!important;
+    display: inline-block;
+    margin: 5px 0px 0px 20px!important;;
+    text-align: center;
+    font-size: 16px!important;
+}

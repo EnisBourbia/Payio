@@ -1,0 +1,11 @@
+.register-container {
+    width: 450px;
+    background-color: #000;
+    height: 500px;
+    position: absolute; /*Can also be `fixed`*/
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 0;
+    margin: auto;
+}

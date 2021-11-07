@@ -1,0 +1,160 @@
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.411);
+    z-index: 1;
+}
+
+.modal-box {
+    width: 50%;
+    height: 400px;
+    position: absolute;
+    background-color: #FFF;
+    left: 50%;
+    transform:translate(-50%, 50%);
+}
+
+.modal-box h5,  .modal-box-company h5, .modal-box-budget h5 {
+    padding: 20px 0px 20px 20px;
+    border-bottom: 2px solid lightgray;
+}
+
+.modal-box i,  .modal-box-company i, .modal-box-budget i {
+   position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 19px;
+    color: gray;
+}
+
+.modal-box i:hover,  .modal-box-company i:hover, .modal-box-budget i:hover {
+    cursor: pointer;
+    color: rgb(255, 0, 0);
+ }
+
+.modal-box form {
+    padding-left: 20px;
+ }
+
+ .modal-box-company {
+    width: 40%;
+    height: 700px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #FFF;
+    overflow-y: auto;
+ }
+
+ .modal-box-company form input, .modal-box-budget form input {
+    display: block; 
+    width: 80%;
+    margin: auto auto 15px auto;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid rgb(151, 151, 151)
+ }
+
+  .modal-box-company form span, .modal-box-budget form span {
+    display: inline-block;
+    width: 80%;
+    margin: auto;
+    margin: 0px 10% 0px 10%;
+ }
+
+.form-layout-modal {
+    float:left;
+    margin-top: 30px;
+}
+
+.form-layout-modal input, .form-layout-modal select, .form-layout-modal h6 {
+    width: 100px!important;
+    margin-right: 50px;
+    padding: 10px;
+    outline: none;
+}
+
+.total-sum {
+    width: 100%;
+    margin-top: 30px;
+    float: left;
+}
+
+.form-layout-modal select {
+    border-color: lightgray;
+}
+
+.article-name {
+    width: 50%;
+}
+
+.article-number {
+    width: 15%;
+    margin-right: 25px;
+}
+
+.modal-footer {
+    width: 100%;
+}
+
+.payment-settings p {
+    margin-left: 10%;
+    padding-top: 30px;
+}
+
+.payment-settings h5 {
+    border: none;
+    margin: 25px 0px 25px 10%;
+    padding: 0px;
+}
+
+.payment-input {
+    width: 100%!important;
+    text-align: center;
+    display: inline-block;
+    padding-bottom: 30px;
+}
+
+.payment-input input, .payment-input select {
+    width: 40%!important;
+    display: inline!important;
+    margin: 3px!important;
+}
+
+.payment-input select {
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid rgb(151, 151, 151);
+}
+
+.modal-box-budget {
+    width: 550px;
+    height: 550px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #FFF;
+    overflow-y: auto;
+}
+
+.modal-box-budget form button{
+    width: 180px;
+    padding: 5px;
+    margin: auto;
+    display: block;
+    background-color: rgb(5, 172, 135);;
+    border: none;
+    color: #FFF;
+    font-weight: 600;
+}
+
+.modal-box-budget form input[type=checkbox]{
+    width: auto;
+    margin-left: 10%;
+    display: inline-block;
+}

@@ -1,0 +1,80 @@
+.invoice-table {
+    width: 90%;
+    margin: 5px auto 70px auto;
+    background-color: #FFF;
+    display: block;
+}
+
+.table-action-buttons button {
+    margin-right: 5px;
+}
+
+.table-action-buttons {
+    width: 80%;
+    margin: auto;
+    margin: 10px auto 0px auto;
+}
+
+.invoice-table form {
+    padding: 0px 0px 30px 20px;
+}
+
+.invoice-table select {
+    width: 150px;
+}
+
+.invoice-table input {
+    width: 230px;
+}
+
+.invoice-table select, .invoice-table input {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.invoice-table table {
+    margin-top: 30px;
+    min-width: 100%;
+}
+
+.invoice-table th{
+    color: rgb(184, 184, 184);
+    font-weight: 200;
+}
+
+.invoice-table tr{
+    border-bottom: 1px solid rgba(170, 170, 170, 0.24);
+}
+
+.invoice-table td, .invoice-table th{
+    padding: 10px;
+}
+
+.invoice-status {
+    color: #FFF;
+    font-size: 13px;
+    padding: 7px 15px 7px 15px;
+    border-radius: 15px;
+}
+
+.invoice-status-0 {
+    background-color: rgba(219, 124, 0, 0.733);
+}
+
+.invoice-status-1 {
+    background-color: rgba(0, 140, 255, 0.733);
+}
+
+.invoice-status-2 {
+    background-color: rgba(24, 211, 24, 0.733);
+}
+
+
+.displayed-invoice {
+    position: relative;
+    padding: 0px 12px 0px 12px;
+    bottom: 25px;
+    font-size: 18px;
+    border-bottom: 3px solid rgba(24, 211, 24, 0.733);
+}
+
