@@ -1,0 +1,113 @@
+{% load l10n %}
+
+
+<html>
+<head>
+  <title>Invoice - {{ company.name | safe }}</title>
+</head>
+<body>
+
+<div class="header row justify-content-center">
+  <div class="company">
+    <img src="{{ MEDIA_HOST | safe }}{{ company.logo | safe }}" />
+  </div>
+  <div class="invoice-info">
+    <span id="invoice-info-header">Invoice</span><br/>
+    <span>Amount due: </span> <span class="invoice-info-data">{{ total | safe }} {{ currency | safe }}</span><br/>
+    <span>OCR-nr/message: </span> <span class="invoice-info-data">{{ ocr_number | safe }}</span><br/>
+    <span>Bankgiro: </span> <span class="invoice-info-data">{{ company.bankgiro | safe }}</span><br/>
+    <span>Due date: </span> <span class="invoice-info-data">{{ expiry_date | safe }}</span>
+  </div>
+</div>
+  
+
+<div class="sender-row">
+    <div class="block-info"> 
+      <br/>
+    <span>Sender:</span><br/>
+    <span><b>{{ company.name | safe }}</b></span><br>
+    <span>{{ company.adress | safe }}</span><br>
+    <span>{{ company.city | safe }}</span>
+    <span>{{ company.zip_code | safe }}</span><br>
+    <span>{{ company.email_contact | safe }}</span>
+  </div>
+
+    <div class="block-info"> 
+      <br/>
+    <span>Receiver:</span><br/>
+    <span><b>{{ customer.name | safe }}</b></span><br>
+    <span>{{ customer.adress | safe }}</span><br>
+    <span>{{ customer.city | safe }}</span>
+    <span>{{ customer.zip_code | safe }}</span><br>
+    <span>{{ customer.email_invoice | safe }}</span>
+  </div>
+</div>
+
+<div class="invoice-info-container">
+<div class="invoice-info-2">
+  <span class="invoice-info-header">Invoice number: </span><span class="invoice-info-text"> {{ invoice_number | safe }}</span><br/>
+  <span class="invoice-info-header">invoice date: </span><span class="invoice-info-text"> {{ date | safe }}</span><br/>
+  <span class="invoice-info-header">Company number:  </span><span class="invoice-info-text"> {{ company.org_number | safe }}</span><br/>
+  <span class="invoice-info-header">Your reference:  </span><span class="invoice-info-text"> {{ company.reference | safe }}</span><br/>
+</div>
+</div>
+
+<div class="article-table">
+  <table>
+    <tr>
+      <th>ART.NR</th>
+      <th>DESCRIPTION</th>
+      <th>AMOUNT</th>
+      <th>UNIT</th>
+      <th>UNIT PRICE</th>
+      <th>VAT</th>
+      <th>TOTAL</th>
+    </tr>
+    {% for articles in rows %}
+    <tr>
+      <!-- {{ articles.article_number }}
+      {{ articles.unit }} -->
+      <td>{{ articles.product.product_number | safe }}</td>
+      <td>{{ articles.description | safe }}</td>
+      <td>{{ articles.amount | safe }}</td>
+      <td>{{ articles.unit | safe }}</td>
+      <td>{{ articles.price | safe }} {{ currency | safe }}</td>
+      <td>{{ articles.moms | safe }} %</td>
+      <td>{{ articles.total | safe }} {{ currency | safe }}</td>
+    {% endfor %}
+
+    </tr>
+  </table>
+</div>
+
+<div class="sum-table">
+  <div class="sum"><span class="amount-header-netto">Sub total: </span><br/><span class="amount-netto"> {{ netto | safe }}</span></div>
+  <div class="sum"><span class="amount-header-moms">VAT:</span><br/><span class="amount-moms"> {{ moms | safe }}</span></div>
+  <div class="sum sum-total-float"><span class="amount-header-total">Total:</span><br/><span class="amount-number-total">{{ currency | safe }} {{ total | safe }}</span></div><br/>
+</div>
+
+  <div class="policy-text">
+    <p>This invoice was sent using invoicing service provided by Fakturio. Payment terms: 30 days, default interest {{ interest | safe }}%. Objections against this invoice needs to be submitted before {{ expiry_date | safe }} to {{ company.name | safe }} (Company). Questions
+      should be sent to ({{ company.email_contact | safe }}).<br>{% if company.f_skatt %} {{ "Approved for F-tax." | safe }} {% endif %} {% if not company.f_skatt %} {{ "Not approved for F-tax." | safe }} {% endif %}</p>
+  </div>
+
+  <hr/>
+<div class="payment-info">
+  <span><b>Company information:</b></span><br/>
+  <span class="payment-info-header">Company nr: </span><span class="payment-info-text"> <b>{{ company.org_number | safe }}</b></span><br>
+  <span class="payment-info-header">VAT nr: </span><span class="payment-info-text"> <b>{{ company.moms_number | safe }}</b></span><br>
+  <span class="payment-info-header">IBAN: </span><span class="payment-info-text"> <b>{{ company.iban | safe }}</b></span><br>
+</div>
+
+<div class="payment-info float-right">
+  <span><b>Customer information:</b></span><br/>
+  <span class="payment-info-header">Company nr: </span><span class="payment-info-text"> <b>{{ customer.org_number | safe }}</b></span><br>
+  <span class="payment-info-header">VAT nr: </span><span class="payment-info-text"> <b>{{ customer.moms_number | safe }}</b></span><br>
+  <span class="payment-info-header">Customer nr: </span><span class="payment-info-text"> <b>{{ customer.customer_number | safe }}</b></span><br>
+</div>
+
+<script>
+  
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+.top-header {
+    height: 60px;
+    box-shadow: 0 4px 4px -2px rgba(0,0,0,.2);
+    min-width: 100%;
+    position: fixed;
+    background-color: #FFF;
+    z-index: 10;
+}
+
+.logo-container {
+    width: 150px;
+}
+
+.logo-container img {
+    margin-top: 5px;
+}
+
+.account-name {
+    text-align: right;
+    margin: 10px 100px 0px 0px;
+}
+
+.account-name h6 {
+    font-family: sans-serif;
+    border: 1px solid;
+    padding: 10px;
+}
+
+.account-name h6:hover {
+    background-color: rgba(156, 156, 156, 0.067);
+    cursor: pointer;
+}
+
+.account-name h6 i {
+    position: relative;
+    font-size: 14px;
+    top: 2px;
+}

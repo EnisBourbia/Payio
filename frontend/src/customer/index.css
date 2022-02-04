@@ -1,0 +1,11 @@
+.customer-table-header {
+    display: inline;
+    padding: 30px;
+}
+
+.customer-table-header span {
+    font-size: 25px;
+    font-weight: 200;
+    display: inline-block;
+    padding-top: 10px;
+}

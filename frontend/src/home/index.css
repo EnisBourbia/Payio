@@ -1,0 +1,100 @@
+body {
+    width: 100%;
+    overflow-y: scroll!important;
+}
+
+.main-window {
+    min-width: calc(100% - 240px);
+    background-color: rgb(238, 238, 238);
+    position: absolute;
+    right: 0px;
+    min-height: 100%;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 40px auto auto auto;
+}
+
+.content-container h2 {
+    font-weight: 400;
+}
+
+.money-data-container {
+    max-width: 1200px;
+    background-color: #FFF;
+    border: 2px solid rgb(4, 130, 248);
+    margin: 40px auto auto auto;
+}
+
+
+.money-data-container span {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    margin: 30px 0px 30px 0px;
+}
+
+.border-right-green {
+    border-right: 2px solid rgb(4, 130, 248);
+}
+
+.data-chart {
+    max-width: 1200px;
+    margin: 30px auto 50px auto;
+    background-color: #FFF;
+}
+
+.data-chart h5 {
+    font-family: sans-serif;
+    padding: 10px 10px;
+}
+
+.data-chart-container {
+    width: 80%;
+    margin: 50px auto 150px auto;
+    background-color: #FFF;
+}
+
+.data-chart-container h5 {
+    font-family: sans-serif;
+    padding: 10px 10px;
+}
+
+.data-chart-radial {
+    width: 40%;
+    margin: auto;
+}
+
+.home-grid-container {
+    background-color: #FFF;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 20px 100px 20px;
+}
+
+
+.home-service-box {
+    text-align: center;
+    padding: 20px;
+}
+
+.home-service-box img {
+    width: 140px;
+    margin: 10px;
+}
+
+.home-service-box button {
+    margin-top: 5px;
+}
+
+.center-service-box {
+    border-right: 3px solid rgb(236, 236, 236);
+    border-left: 3px solid rgb(236, 236, 236);
+}
+
+.user-guide-image {
+    max-width: 450px;
+    display: block;
+    margin: 100px auto auto auto;
+}

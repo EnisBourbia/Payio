@@ -1,0 +1,26 @@
+.bank-account-container {
+    margin: 20px auto 20px auto;
+    padding: 30px;
+    background-color: #FFF;
+}
+
+.bank-account-link {
+    font-size: 15px;
+    border-bottom: 0.3px solid rgb(223, 223, 223);
+}
+
+.bank-account-link:hover {
+    transition: 300ms;
+    border-bottom: 1px solid #0077ff;
+    text-decoration: none;
+}
+
+.connected-bank-container-info {
+    border: 1px solid rgb(145, 145, 145);
+    padding: 10px;
+}
+
+.connected-bank-name {
+    position: relative;
+    bottom: 13px;
+}

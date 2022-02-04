@@ -1,0 +1,41 @@
+.accordion {
+    margin-bottom: 10px;
+}
+
+.accordion-todo {
+    margin: auto;
+}
+
+.center-loading-icon {
+    position: absolute; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.todo-row {
+    border-bottom: 1px solid rgb(207, 207, 207);
+    padding: 15px;
+    color: rgb(63, 63, 63);
+}
+
+.todo-row span {
+    display: inline-block;
+}
+
+.todo-icon {
+    width: 20%;
+}
+
+.todo-type {
+    width: 30%;
+}
+
+.todo-date {
+    width: 20%;
+}
+
+.todo-button {
+    width: 30%;
+    text-align: right;
+}
